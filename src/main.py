@@ -39,7 +39,7 @@ def difficultyLevel():
 def game():
     welcomeMessage()
     secretNo = rd.randint(1, 100)
-    attempts = difficultyLevel()
+    remainingAttempts = difficultyLevel()
     usedAttempts = 0
     
     while usedAttempts > 0:
@@ -50,5 +50,19 @@ def game():
             continue
         
         usedAttempts += 1
-        attempts -= 1
+        remainingAttempts -= 1
+        
+        if guess == secretNo:
+            print(f"Congratulations! You guessed the correct number in {usedAttempts} attempts.")
+            break
+        elif guess < secretNo:
+            print(f"Incorrect! The number is greater than {guess}")
+        else:
+            print(f"Incorrect! The number is less than {guess}")
+            
+    if remainingAttempts == 0 and guess != secretNo:
+        print(f"Ups! Better luck next time! Try again!")
+
+if __name__ == "__main__":
+    game()
         
