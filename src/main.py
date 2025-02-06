@@ -42,7 +42,7 @@ def game():
     remainingAttempts = difficultyLevel()
     usedAttempts = 0
     
-    while usedAttempts > 0:
+    while remainingAttempts > 0:
         try:
             guess = int(input(f"Enter your guess: "))
         except ValueError:
