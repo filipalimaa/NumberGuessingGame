@@ -8,7 +8,7 @@ def welcomeMessage():
              Welcome to the Number Guessing Game!
           ==========================================
           I'm thinking of a number between 1 and 100.
-        You have 5 chances to guess the correct number.
+            You need to guess the correct number.
     
              GOOD LUCK!""")
     
